@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>욉거러를 위한 든든한동</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index2_styles.css">
+    <style>
+        /* body를 flex 컨테이너로 설정하여 전체 콘텐츠를 수직 및 수평 중앙에 배치 */
+        body {
+            display: flex; /* Flexbox 레이아웃 활성화 */
+            justify-content: center; /* 콘텐츠를 수평으로 중앙 정렬 */
+            align-items: center; /* 콘텐츠를 수직으로 중앙 정렬 */
+            height: 100vh; /* 뷰포트 높이를 100%로 설정 */
+            margin: 0; /* body의 기본 여백 제거 */
+        }
+        
+        /* 이미지 컨테이너, 중앙에 배치 */
+        .image-container {
+            display: flex; /* Flexbox 레이아웃 활성화 */
+            justify-content: center; /* 이미지를 수평으로 중앙 정렬 */
+            align-items: center; /* 이미지를 수직으로 중앙 정렬 */
+        }
+        
+        /* 이미지에 ���빡이는 효과 적용 */
+        .blinking-image {
+            cursor: pointer; /* 클릭 가능한 이미지를 나타내기 위해 포인터 커서 사용 */
+            animation: blinking 2.5s infinite; /* 깜빡이는 애니메이션 속도를 느리게 조정 */
+            width: 50%; /* 이미지 너비를 80%로 설정 (20% 줄임) */
+            height: auto; /* 비율을 유지하기 위해 높이는 자동으로 설정 */
+        }
+        
+        /* 깜빡이는 애니메이션의 키프레임 정의 */
+        @keyframes blinking {
+            0% { opacity: 1; } /* 시작 시 완전히 보임 */
+            50% { opacity: 0.5; } /* 50%에서 반투명 */
+            100% { opacity: 1; } /* 끝에서 다시 완전히 보임 */
+        }
+        
+        /* 제목을 상단 중앙에 고정 */
+        header {
+            position: absolute; /* 절대 위치 지정 */
+            top: 20px; /* 상단에서 20px 떨어진 위치 */
+            left: 50%; /* 수평 중앙 정렬 */
+            transform: translateX(-50%); /* 중앙 정렬을 위한 변환 */
+            text-align: center; /* 텍스트 중앙 정렬 */
+        }
+    </style>
+    <script>
+        /* 사용자가 이미지를 클릭했을 때 cooking-category 페이지로 리디렉션하는 함수 */
+        function redirectToCategory() {
+            window.location.href = 'cooking-category.html'; // cooking-category.html로 리디렉션
+        }
+    </script>
+</head>
+<body style="background: url('background-image.jpg') no-repeat center center fixed; background-size: cover;">
+    <header>
+        <h1>욉거러를 위한 든든한동</h1>
+    </header>
+    <div class="image-container">
+        <!-- 클릭 이벤트로 리디렉션을 트리거하고 깜빡이는 애니메이션이 적용된 이미지 -->
+        <img src="images/cooking-bear.png" alt="Cooking Bear" onclick="redirectToCategory()" class="blinking-image">
+    </div>
+</body>
+</html>

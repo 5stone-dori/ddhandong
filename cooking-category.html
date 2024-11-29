@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쿠킹 카테고리 - 욉거러를 위한 든든한동</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="category_styles.css">
+    <style>
+        /* 화면을 3분할하여 상단과 하단에 구성 요소 배치 */
+        body {
+            background: url('background-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'MyCustomFont', Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        
+        /* 상단 카테고리 이름 섹션 */
+        .category-header {
+            flex: 0.5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* 하단 이미지 섹션 */
+        .category-content {
+            flex: 3;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .category-item {
+            position: relative;
+            width: 30%;
+            cursor: pointer;
+            transition: transform 0.3s;
+            border: 2px solid #000;
+            border-radius: 15px;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .category-item:hover {
+            transform: scale(1.05); /* 마우스 오버 시 이미지 확대 효과 */
+        }
+        
+        .category-image {
+            width: 100%;
+            height: 300px; /* 모든 이미지를 동일한 높이로 설정 */
+            object-fit: cover; /* 이미지 비율을 유지하며 크기에 맞춤 */
+            display: block;
+            margin-bottom: 20px;
+        }
+        
+        .category-label {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1.5em;
+            text-align: center;
+            width: calc(100% - 20px);
+        }
+    </style>
+    <script>
+        /* 각각의 이미지 클릭 시 해당 페이지로 이동하는 함수 */
+        function redirectToPage(page) {
+            console.log('Redirecting to page:', page); // 디버그용 로그 추가
+            window.location.href = page + '.html';
+        }
+        
+        /* 페이지 로드 시 로깅 추가 */
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('쿠킹 카테고리 페이지가 로드되었습니다.');
+        });
+    </script>
+</head>
+<body>
+    <!-- 카테고리 이름을 보여주는 상단 섹션 -->
+    <div class="category-header">
+        욉거러를 위한 든든한동
+    </div>
+    
+    <!-- 이미지가 배치된 하단 섹션 -->
+    <div class="category-content">
+        <div class="category-item" onclick="redirectToPage('whiteblack')">
+            <div class="category-label">자취방 흑백요리사</div>
+            <img src="images/whiteblack.png" alt="White Black" class="category-image">
+            <script>console.log('White Black 이미지가 생성되었습니다.');</script>
+        </div>
+        <div class="category-item" onclick="redirectToPage('street')">
+            <div class="category-label">한동대 골목식당</div>
+            <img src="images/street.png" alt="Street" class="category-image">
+            <script>console.log('Street 이미지가 생성되었습니다.');</script>
+        </div>
+        <div class="category-item" onclick="redirectToPage('cooler')">
+            <div class="category-label">냉장고를 부탁해</div>
+            <img src="images/cooler.png" alt="Cooler" class="category-image">
+            <script>console.log('Cooler 이미지가 생성되었습니다.');</script>
+        </div>
+    </div>
+</body>
+</html>

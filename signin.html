@@ -6,7 +6,6 @@
     <title>회원가입 - 욉거러를 위한 든든한동</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="login_styles.css">
-    <link rel="stylesheet" href="styles.css">
 
     <script>
         // 회원가입 폼 제출 시 유효성 검사 및 서버로 데이터 전송
@@ -38,6 +37,12 @@
                 return;
             }
 
+            // 비밀번호 최소 길이 유효성 검사 추가
+            if (password.length < 8) {
+                alert('비밀번호는 최소 8자 이상이어야 합니다.');
+                return;
+            }
+
             // 서버로 데이터를 전송 (예시)
             const userData = {
                 username: username,
@@ -48,26 +53,27 @@
 
             // fetch API로 서버에 POST 요청 보내기
             fetch('/signup', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(userData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    // 회원가입이 성공하면 팝업 메시지 띄우고 index.html로 리디렉션
-                    alert('회원가입이 완료되었습니다!');
-                    window.location.href = 'index.html'; // 초기화면으로 리디렉션
-                } else {
-                    alert('회원가입에 실패했습니다. 다시 시도해주세요.');
-                }
-            })
-            .catch(error => {
-                console.error('서버와의 통신 중 오류 발생:', error);
-                alert('서버와 연결할 수 없습니다. 다시 시도해주세요.');
-            });
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(userData)
+})
+.then(response => response.json())  // 서버 응답을 JSON으로 변환
+.then(data => {
+    console.log(data);  // 서버 응답을 콘솔에 출력
+    if (data.success) {
+        alert('회원가입이 완료되었습니다!');
+        window.location.href = 'index.html';  // 초기화면으로 리디렉션
+    } else {
+        alert('회원가입에 실패했습니다. 다시 시도해주세요.');
+    }
+})
+.catch(error => {
+    console.error('서버와의 통신 중 오류 발생:', error);
+    alert('서버와 연결할 수 없습니다. 다시 시도해주세요.');
+});
+
         }
     </script>
 </head>

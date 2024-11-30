@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>냉장고를 부탁해</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 화면을 3분할하여 상단과 하단에 구성 요소 배치 */
+        body {
+            background: url('background-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'MyCustomFont', Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        </style>
+
+</head>
+<body>
+    
+    <header>
+        <h1>냉장고를 부탁해!</h1>
+        <p>원하는 재료를 선택하고 제출하세요!</p>
+    </header>
+    <main>
+        <div class="container">
+            <!-- 냉장고 이미지 -->
+            <div class="fridge">
+                <img src="images/fridge.png" alt="냉장고 이미지" usemap="#fridge-map" id="fridge-image">
+                <map name="fridge-map">
+                    <area shape="rect" coords="50,50,200,200" alt="상단" id="area-1">
+                    <area shape="rect" coords="50,200,200,350" alt="중단" id="area-2">
+                    <area shape="rect" coords="50,350,200,500" alt="하단" id="area-3">
+                </map>
+                <!-- 재료가 냉장고 위에 겹칠 영역 -->
+                <div id="overlay"></div>
+            </div>
+
+            <!-- 재료 선택 -->
+            <div class="ingredients">
+                <h2>선택하신 재료들:</h2>
+                <ul id="selected-ingredients"></ul>
+                <form id="ingredient-form">
+                    <h3>소스 및 조미료:</h3>
+                    <label><input type="checkbox" value="간장"> 간장</label><br>
+                    <label><input type="checkbox" value="굴소스"> 굴소스</label><br>
+                    <label><input type="checkbox" value="데리야끼소스"> 데리야끼소스</label><br>
+                    <label><input type="checkbox" value="고추"> 고추</label><br>
+                    <label><input type="checkbox" value="깨"> 깨</label><br>
+                    <label><input type="checkbox" value="설탕"> 설탕</label><br>
+                    <label><input type="checkbox" value="소금"> 소금</label><br>
+                    <label><input type="checkbox" value="올리브유"> 올리브유</label><br>
+                    <label><input type="checkbox" value="참기름"> 참기름</label><br>
+                    <label><input type="checkbox" value="후추"> 후추</label><br>
+                    <h3>식재료:</h3>
+                    <label><input type="checkbox" value="김치"> 김치</label><br>
+                    <label><input type="checkbox" value="달걀"> 달걀</label><br>
+                    <label><input type="checkbox" value="닭다리살"> 닭다리살</label><br>
+                    <label><input type="checkbox" value="당근"> 당근</label><br>
+                    <label><input type="checkbox" value="대파"> 대파</label><br>
+                    <label><input type="checkbox" value="돼지고기"> 돼지고기</label><br>
+                    <label><input type="checkbox" value="마늘"> 마늘</label><br>
+                    <label><input type="checkbox" value="배추"> 배추</label><br>
+                    <label><input type="checkbox" value="베이컨"> 베이컨</label><br>
+                    <label><input type="checkbox" value="버터"> 버터</label><br>
+                    <label><input type="checkbox" value="스팸"> 스팸</label><br>
+                    <label><input type="checkbox" value="옥수수통조림"> 옥수수통조림</label><br>
+                    <label><input type="checkbox" value="콩나물"> 콩나물</label><br>
+                    <label><input type="checkbox" value="파스타면"> 파스타면</label><br>
+                    <button type="submit">SUBMIT</button>
+                    <button type="button" id="cancel-button">CANCEL</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+

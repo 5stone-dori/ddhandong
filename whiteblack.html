@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자취방 흑백요리사</title>
+    <link rel="stylesheet" href="whiteblack.css">
+</head>
+<body>
+    <header>
+        <h1>자취방 흑백요리사</h1>
+    </header>
+    <main>
+        <button id="back-button" style="display: none;">뒤로가기</button>
+        <div id="recipe-grid" class="grid">
+            <div class="recipe-card" data-name="계살덮밥">
+                <img src="images/계살덮밥.png" alt="계살덮밥">
+                <p>계살덮밥</p>
+            </div>
+            <div class="recipe-card" data-name="고기 수박 우동">
+                <img src="images/고기수박우동.png" alt="고기 수박 우동">
+                <p>고기 수박 우동</p>
+            </div>
+            <div class="recipe-card" data-name="고등어 미소 조림">
+                <img src="images/고등어미소조림.png" alt="고등어 미소 조림">
+                <p>고등어 미소 조림</p>
+            </div>
+            <div class="recipe-card" data-name="김치찌개">
+                <img src="images/김치찌개.png" alt="김치찌개">
+                <p>김치찌개</p>
+            </div>
+            <div class="recipe-card" data-name="비빔밥">
+                <img src="images/비빔밥.png" alt="비빔밥">
+                <p>비빔밥</p>
+            </div>
+            <div class="recipe-card" data-name="된장찌개">
+                <img src="images/된장찌개.png" alt="된장찌개">
+                <p>된장찌개</p>
+            </div>
+            <div class="recipe-card" data-name="불고기">
+                <img src="images/불고기.png" alt="불고기">
+                <p>불고기</p>
+            </div>
+            <div class="recipe-card" data-name="잡채">
+                <img src="images/잡채.png" alt="잡채">
+                <p>잡채</p>
+            </div>
+            <div class="recipe-card" data-name="떡볶이">
+                <img src="images/떡볶이.png" alt="떡볶이">
+                <p>떡볶이</p>
+            </div>
+            <div class="recipe-card" data-name="순두부찌개">
+                <img src="images/순두부찌개.png" alt="순두부찌개">
+                <p>순두부찌개</p>
+            </div>
+            <div class="recipe-card" data-name="오징어볶음">
+                <img src="images/오징어볶음.png" alt="오징어볶음">
+                <p>오징어볶음</p>
+            </div>
+            <div class="recipe-card" data-name="삼겹살">
+                <img src="images/삼겹살.png" alt="삼겹살">
+                <p>삼겹살</p>
+            </div>
+            <div class="recipe-card" data-name="김밥">
+                <img src="images/김밥.png" alt="김밥">
+                <p>김밥</p>
+            </div>
+            <div class="recipe-card" data-name="갈비찜">
+                <img src="images/갈비찜.png" alt="갈비찜">
+                <p>갈비찜</p>
+            </div>
+            <div class="recipe-card" data-name="파전">
+                <img src="images/파전.png" alt="파전">
+                <p>파전</p>
+            </div>
+            <div class="recipe-card" data-name="치킨">
+                <img src="images/치킨.png" alt="치킨">
+                <p>치킨</p>
+            </div>
+        </div>
+
+        <!-- 모달 구조 추가 -->
+        <div id="recipe-modal" class="modal">
+            <div class="modal-content">
+                <img id="modal-image" src="" alt="레시피 이미지">
+                <div class="recipe-input">
+                    <h2 id="modal-title"></h2>
+                    <textarea id="recipe-text" placeholder="레시피를 입력하세요"></textarea>
+                    <input type="text" id="recipe-url" placeholder="레시피 URL을 입력하세요">
+                    <div id="recipe-output">
+                        <a id="output-url" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="whiteblack.js"></script>
+    </main>
+</body>
+</html>
+

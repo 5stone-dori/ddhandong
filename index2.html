@@ -23,7 +23,7 @@
             align-items: center; /* 이미지를 수직으로 중앙 정렬 */
         }
         
-        /* 이미지에 ���빡이는 효과 적용 */
+        /* 이미지에 빡이는 효과 적용 */
         .blinking-image {
             cursor: pointer; /* 클릭 가능한 이미지를 나타내기 위해 포인터 커서 사용 */
             animation: blinking 2.5s infinite; /* 깜빡이는 애니메이션 속도를 느리게 조정 */
@@ -46,15 +46,30 @@
             transform: translateX(-50%); /* 중앙 정렬을 위한 변환 */
             text-align: center; /* 텍스트 중앙 정렬 */
         }
+        
+        .user-nickname {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: rgb(0, 0, 0);
+            font-size: 1.2em;
+        }
     </style>
     <script>
-        /* 사용자가 이미지를 클릭했을 때 cooking-category 페이지로 리디렉션하는 함수 */
+        window.onload = function() {
+            const nickname = localStorage.getItem('userNickname');
+            if (nickname) {
+                document.getElementById('userNickname').textContent = nickname;
+            }
+        }
+
         function redirectToCategory() {
-            window.location.href = 'cooking-category.html'; // cooking-category.html로 리디렉션
+            window.location.href = 'cooking-category.html';
         }
     </script>
 </head>
 <body style="background: url('background-image.jpg') no-repeat center center fixed; background-size: cover;">
+    <div id="userNickname" class="user-nickname"></div>
     <header>
         <h1>욉거러를 위한 든든한동</h1>
     </header>

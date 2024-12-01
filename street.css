@@ -1,47 +1,85 @@
-/* body 기본 스타일 */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff7db;
+    background-color: #f8f8f8;
 }
 
-/* 헤더 스타일 */
 header {
     text-align: center;
     background-color: #ffe5b4;
     padding: 20px;
 }
 
-/* 그리드 컨테이너 */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+.category {
+    margin: 20px auto;
+    max-width: 800px;
     padding: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-    margin-top: 150px;
+    border: 2px solid #ddd; /* 경계선 추가 */
+    border-radius: 15px; /* 둥근 모서리 추가 */
+    background-color: #fff; /* 배경색 추가 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
 }
 
-/* 그리드 아이템 스타일 */
-.grid-item {
+.category h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.carousel-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: #ffcc00;
-    color: #000;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s, background-color 0.3s;
+    position: relative;
 }
 
-/* 호버 효과 */
-.grid-item:hover {
-    transform: scale(1.1);
-    background-color: #ffaa00;
+.carousel {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
 }
+
+.carousel-item {
+    min-width: 25%;
+    text-align: center;
+    padding: 10px;
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.carousel-item p {
+    margin-top: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
+
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+

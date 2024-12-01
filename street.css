@@ -1,0 +1,47 @@
+/* body 기본 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff7db;
+}
+
+/* 헤더 스타일 */
+header {
+    text-align: center;
+    background-color: #ffe5b4;
+    padding: 20px;
+}
+
+/* 그리드 컨테이너 */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+/* 그리드 아이템 스타일 */
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffcc00;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/* 호버 효과 */
+.grid-item:hover {
+    transform: scale(1.1);
+    background-color: #ffaa00;
+}

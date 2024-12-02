@@ -101,39 +101,39 @@ button:hover {
 
 .ingredient-image {
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 75px;
+    height: 75px;
     display: none;
 }
 
 /* 왼쪽 도어 (위에서부터) */
-#간장-img { top: 10%; left: 20%; }
-#깨-img { top: 20%; left: 20%; }
-#설탕-img { top: 30%; left: 20%; }
-#소금-img { top: 40%; left: 20%; }
-#올리브유-img { top: 50%; left: 20%; }
-#참기름-img { top: 60%; left: 20%; }
+#간장-img { top: 15%; left: 19%; }
+#깨-img { top: 20%; left: 24%; }
+#설탕-img { top: 27%; left: 19%; }
+#소금-img { top: 32%; left: 24%; }
+#올리브유-img { top: 38%; left: 19%; }
+#참기름-img { top: 44%; left: 24%; }
 
 /* 중앙 상단 */
-#후추-img { top: 10%; left: 40%; }
-#김치-img { top: 10%; left: 50%; }
-#달걀-img { top: 20%; left: 40%; }
-#닭다리살-img { top: 20%; left: 50%; }
-#당근-img { top: 30%; left: 40%; }
-#대파-img { top: 30%; left: 50%; }
+#고추-img { top: 17%; left: 40%; }
+#김치-img { top: 17%; left: 47%; }
+#달걀-img { top: 17%; left: 54%; }
+#닭다리살-img { top: 30%; left: 54%; }
+#베이컨-img { top: 30%; left: 40%; }
+#대파-img { top: 30%; left: 47%; }
 #돼지고기-img { top: 40%; left: 40%; }
-#마늘-img { top: 40%; left: 50%; }
+#마늘-img { top: 40%; left: 47%; }
 
 /* 중앙 하단 */
 #배추-img { top: 50%; left: 40%; }
-#베이컨-img { top: 50%; left: 50%; }
-#버터-img { top: 60%; left: 40%; }
-#스팸-img { top: 60%; left: 50%; }
+#당근-img { top: 40%; left: 54%; }
+#콩나물-img { top: 54%; left: 54%; }
+#스팸-img { top: 54%; left: 40%; }
 
 /* 오른쪽 도어 (위에서부터) */
-#옥수수통조림-img { top: 10%; right: 15%; }
-#콩나물-img { top: 20%; right: 15%; }
-#파스타면-img { top: 30%; right: 15%; }
-#굴소스-img { top: 40%; right: 15%; }
-#데리야끼소스-img { top: 50%; right: 15%; }
-#고추-img { top: 60%; right: 15%; }
+#옥수수통조림-img { top: 15%; right: 19%; }
+#버터-img { top: 20%; right: 24%; }
+#파스타면-img { top: 27%; right: 19%; }
+#굴소스-img { top: 32%; right: 24%; }
+#데리야끼소스-img { top: 38%; right: 19%; }
+#후추-img { top: 44%; right: 24%; }

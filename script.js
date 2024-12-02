@@ -22,6 +22,9 @@ document.getElementById("ingredient-form").addEventListener("submit", function (
         img.style.top = '10%';  // 고정된 위치로 변경 (예: 10%)
         overlay.appendChild(img);
     });
+
+    // 선택된 재료들을 localStorage에 저장
+    localStorage.setItem('selectedIngredients', JSON.stringify(selectedIngredients));
 });
 
 document.getElementById("cancel-button").addEventListener("click", function () {
@@ -44,7 +47,33 @@ document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
 
 
 // submit 버튼 클릭 시 cooler-cooking.html로 이동
-document.getElementById('ingredient-form').addEventListener('submit', function(event) {
-    event.preventDefault();  // 기본 제출 동작 방지
-    window.location.href = 'cooler-cooking.html';  // 페이지 이동
+document.getElementById('ingredient-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // 선택된 체크박스들의 값을 배열로 수집
+    const selectedIngredients = [];
+    const checkboxes = this.querySelectorAll('input[type="checkbox"]:checked');
+    
+    checkboxes.forEach(checkbox => {
+        selectedIngredients.push(checkbox.value);
+    });
+    
+    // 선택된 재료들을 localStorage에 저장
+    localStorage.setItem('selectedIngredients', JSON.stringify(selectedIngredients));
+    
+    // cooler-cooking.html로 이동
+    window.location.href = 'cooler-cooking.html';
+});
+// notice
+document.addEventListener("DOMContentLoaded", () => {
+    const noticeItems = document.querySelectorAll(".notice-item");
+
+    noticeItems.forEach(item => {
+        const title = item.querySelector(".notice-title");
+
+        title.addEventListener("click", () => {
+            // 해당 공지사항 아이템에 'open' 클래스를 토글
+            item.classList.toggle("open");
+        });
+    });
 });

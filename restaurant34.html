@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>국수나무- 한동대 골목식당</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .restaurant-header {
+            padding: 20px;
+        }
+
+        .restaurant-images {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .restaurant-images img {
+            width: 50%;
+            height: auto;
+        }
+
+        .restaurant-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .restaurant-category {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .star {
+            color: #2D8DEE;
+        }
+
+        .location-info {
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            margin-bottom: 15px;
+        }
+
+        .tags {
+            margin-bottom: 15px;
+        }
+
+        .features {
+            margin-bottom: 15px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .map-button {
+            background-color: #03397E;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="restaurant-header">
+        <div class="restaurant-images">
+            <img src="images/국수나무.jpg" alt="국수나무 이미지1">
+            <img src="images/국수나무.2.jpg" alt="국수나무 이미지2">
+        </div>
+
+        <div class="restaurant-info">
+            <h1 class="restaurant-title">국수나무 포항법원점</h1>
+            <div class="restaurant-category">국수나무 |국수 맛집</div>
+
+            <div class="rating">
+                <span class="star">★★★★★</span>
+                <span>4.5</span>
+                <span>(25명의 평가)</span>
+                <span>83점</span>
+                <button class="button" id="shareButton">공유</button>
+            </div>
+
+            <div class="location-info">
+                <p>경북 포항시 북구 장량중앙로 50 장원상가 101호</p>
+                <button class="button map-button" id="mapButton">지도보기</button>
+            </div>
+
+            <div class="contact-info">
+                📞전화번호 0507-1352-5880
+            </div>
+
+            <div class="tags">
+                🏷️ 회식 장소, 점심식사,국수 및 덮밥 맛집
+            </div>
+
+            <div class="features">
+                ➕ 예약, 저녁식사, 포장, 배달
+            </div>
+
+            <div class="notice">
+                📋 폐업신고 · 정보수정 제안
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('mapButton').addEventListener('click', function() {
+            // 네이버 지도 URL로 이동 (실제 URL로 변경 필요)
+            window.location.href = "https://map.naver.com/p/search/%EA%B5%AD%EC%88%98%EB%82%98%EB%AC%B4%20%ED%8F%AC%ED%95%AD%EB%B2%95%EC%9B%90%EC%A0%90/place/1068148627?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp";
+        });
+
+        document.getElementById('shareButton').addEventListener('click', function() {
+            // 현재 페이지 URL을 클립보드에 복사
+            navigator.clipboard.writeText(window.location.href)
+                .then(() => alert('주소가 복사되었습니다.'))
+                .catch(err => console.error('복사 실패:', err));
+        });
+    </script>
+</body>
+</html> 
